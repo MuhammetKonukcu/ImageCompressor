@@ -1,4 +1,4 @@
-package com.muhammet_konukcu.android.utils
+package com.muhammetkonukcu.android.utils
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -22,18 +22,19 @@ import java.util.Locale
 import kotlin.random.Random
 import kotlin.math.roundToInt
 
+/**
+     * @author muhammet_konukcu
+     * createdAt: 08.01.2025
+     * The photo quality is adjusted according to the file size.
+     * You can change it according to your wishes. chooseQuality()
+     */
+
 class ImageCompressor {
 
     private val maxHeight = 1920f
     private val maxWidth = 1080f
     private val tempBufferSize = 16 * 1024
 
-    /**
-     * @author muhammet_konukcu
-     * createdAt: 08.01.2025
-     * The photo quality is adjusted according to the file size.
-     * You can change it according to your wishes. chooseQuality()
-     */
     suspend fun compress(context: Context, uriString: String): String? =
         withContext(Dispatchers.IO) {
             runCatching {
