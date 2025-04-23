@@ -44,6 +44,7 @@ The `chooseQuality` function selects a JPEG quality level based on the input fil
 
 | File Size | JPEG Quality |
 |-----------|-------------|
+| > 10 MB | 30 |
 | > 5 MB | 40 |
 | 2–5 MB | 50 |
 | 1–2 MB | 60 |
